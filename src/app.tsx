@@ -1,3 +1,9 @@
+import { Cursor } from './cursor';
+
 export function App() {
-  return <>app</>;
+  return (
+    <main>
+      <Cursor />
+    </main>
+  );
 }

@@ -1,0 +1,13 @@
+@import 'tailwindcss';
+
+:root {
+  --background-color: 243, 242, 238;
+  --cursor-color: 70, 70, 153;
+
+  --cursor-core-size: 8px;
+  --cursor-border-size: 32px;
+}
+
+html {
+  background-color: var(--background-color);
+}
