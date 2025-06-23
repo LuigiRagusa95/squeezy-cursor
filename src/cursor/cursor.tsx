@@ -42,8 +42,8 @@ export const Cursor = forwardRef<HTMLDivElement, CursorProps>(function Cursor(
 
       if (scale > 3) scale = 3;
 
-      const translateX = `calc(${cursorCenter.x + distance.x * 0.6}px - 50%)`;
-      const translateY = `calc(${cursorCenter.y + distance.y * 0.6}px - 50%)`;
+      const translateX = `calc(${cursorCenter.x + distance.x * 0.3}px - 50%)`;
+      const translateY = `calc(${cursorCenter.y + distance.y * 0.3}px - 50%)`;
       const translateCore = `translate3d(calc(${cursorPos.x}px - 50%), calc(${cursorPos.y}px - 50%), 0)`;
       const translateBorder = `translate3d(${translateX}, ${translateY}, 0) rotate(${angle}deg) scaleX(${scale})`;
 
@@ -54,10 +54,6 @@ export const Cursor = forwardRef<HTMLDivElement, CursorProps>(function Cursor(
     const onMouseMove = (e: MouseEvent) => (cursorPos = { x: e.pageX, y: e.pageY });
 
     document.addEventListener('mousemove', onMouseMove);
-
-    return () => {
-      document.removeEventListener('mousemove', onMouseMove);
-    };
   });
 
   return (
