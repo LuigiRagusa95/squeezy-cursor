@@ -9,5 +9,6 @@
 }
 
 html {
+  cursor: none;
   background-color: var(--background-color);
 }
